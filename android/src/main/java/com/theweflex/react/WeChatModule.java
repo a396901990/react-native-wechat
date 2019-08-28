@@ -519,5 +519,3 @@ public class WeChatModule extends ReactContextBaseJavaModule implements IWXAPIEv
     }
 
 }
-Y: working on android startup slow issue
-T: working on android startup slow issue
