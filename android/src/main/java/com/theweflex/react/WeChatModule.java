@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.facebook.common.executors.UiThreadImmediateExecutorService;
 import com.facebook.common.internal.Files;
@@ -119,8 +119,8 @@ public class WeChatModule extends ReactContextBaseJavaModule implements IWXAPIEv
 
     @ReactMethod
     public void isWXAppSupportApi(Callback callback) {
-        if (api == null) {
-            callback.invoke(NOT_REGISTERED);
+      if (api == null) {
+        callback.invoke(NOT_REGISTERED);
             return;
         }
         callback.invoke(null, api.isWXAppSupportAPI());
@@ -252,7 +252,6 @@ public class WeChatModule extends ReactContextBaseJavaModule implements IWXAPIEv
                         imageCallback.invoke(bitmap);
                     }
                 } else {
-                    throw new Exception("Empty bitmap");
                 }
             }
 
@@ -520,3 +519,5 @@ public class WeChatModule extends ReactContextBaseJavaModule implements IWXAPIEv
     }
 
 }
+Y: working on android startup slow issue
+T: working on android startup slow issue
